@@ -1,396 +1,533 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abhay R Nair - Curriculum Vitae</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f5f5f5;
-            padding: 20px;
-        }
-        
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: white;
-            padding: 50px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
-        }
-        
-        header {
-            text-align: center;
-            border-bottom: 3px solid #2c3e50;
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-        }
-        
-        h1 {
-            font-size: 2.5em;
-            color: #2c3e50;
-            margin-bottom: 10px;
-        }
-        
-        .subtitle {
-            font-size: 1.2em;
-            color: #7f8c8d;
-            margin-bottom: 15px;
-        }
-        
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            font-size: 0.95em;
-        }
-        
-        .contact-info a {
-            color: #3498db;
-            text-decoration: none;
-        }
-        
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-        
-        section {
-            margin-bottom: 30px;
-        }
-        
-        h2 {
-            color: #2c3e50;
-            font-size: 1.5em;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
-        }
-        
-        h3 {
-            color: #34495e;
-            font-size: 1.2em;
-            margin-bottom: 5px;
-        }
-        
-        .date {
-            color: #7f8c8d;
-            font-style: italic;
-            font-size: 0.9em;
-        }
-        
-        .institution {
-            color: #555;
-            font-weight: 600;
-        }
-        
-        ul {
-            margin-left: 20px;
-            margin-top: 10px;
-        }
-        
-        li {
-            margin-bottom: 8px;
-        }
-        
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-top: 10px;
-        }
-        
-        .skill-category {
-            background: #ecf0f1;
-            padding: 15px;
-            border-radius: 5px;
-        }
-        
-        .skill-category h4 {
-            color: #2c3e50;
-            margin-bottom: 8px;
-        }
-        
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-        
-        .tag {
-            background: #3498db;
-            color: white;
-            padding: 4px 10px;
-            border-radius: 3px;
-            font-size: 0.85em;
-        }
-        
-        .project {
-            margin-bottom: 20px;
-            padding: 15px;
-            background: #f8f9fa;
-            border-left: 4px solid #3498db;
-        }
-        
-        .project-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 8px;
-        }
-        
-        .project-link {
-            color: #3498db;
-            text-decoration: none;
-            font-size: 0.9em;
-        }
-        
-        .tech-stack {
-            color: #7f8c8d;
-            font-size: 0.9em;
-            margin-top: 5px;
-        }
-        
-        @media print {
-            body {
-                background: white;
-                padding: 0;
-            }
-            .container {
-                box-shadow: none;
-                padding: 20px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Abhay R Nair - Data Science and AI Resume">
+  <title>Abhay R Nair | Data Science Resume</title>
+
+  <style>
+    :root {
+      --ink: #192b3c;
+      --muted: #526273;
+      --accent: #136b9c;
+      --line: #d9e3ea;
+      --paper: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #eaf0f5;
+      font: 14px/1.47 Arial, Helvetica, sans-serif;
+      color: var(--ink);
+    }
+
+    .page {
+      max-width: 850px;
+      margin: 28px auto;
+      background: var(--paper);
+      padding: 37px 46px;
+      box-shadow: 0 8px 28px #203d531c;
+    }
+
+    header {
+      text-align: center;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 13px;
+    }
+
+    h1 {
+      font-size: 27px;
+      letter-spacing: 1px;
+      margin: 0 0 2px;
+    }
+
+    .role {
+      color: var(--accent);
+      font-weight: 700;
+      margin: 0 0 8px;
+      font-size: 14px;
+    }
+
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 4px 13px;
+      font-size: 11.5px;
+    }
+
+    a {
+      color: #12608f;
+      text-decoration: none;
+      overflow-wrap: anywhere;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      margin-top: 17px;
+      break-inside: avoid;
+    }
+
+    h2 {
+      font-size: 12px;
+      color: var(--accent);
+      letter-spacing: 1.25px;
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--line);
+      margin: 0 0 8px;
+      padding-bottom: 4px;
+    }
+
+    p {
+      margin: 4px 0;
+    }
+
+    .item {
+      margin-bottom: 12px;
+      break-inside: avoid;
+    }
+
+    .item-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: baseline;
+    }
+
+    h3 {
+      font-size: 13px;
+      margin: 0;
+    }
+
+    .date {
+      font-size: 11px;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .sub {
+      color: var(--muted);
+      font-size: 11.5px;
+      margin: 2px 0 4px;
+    }
+
+    ul {
+      padding-left: 17px;
+      margin: 5px 0 0;
+    }
+
+    li {
+      margin: 3px 0;
+    }
+
+    .skills p {
+      margin: 4px 0;
+    }
+
+    .skills strong {
+      color: #243b51;
+    }
+
+    .toolbar {
+      text-align: center;
+      padding: 16px;
+    }
+
+    button {
+      background: var(--accent);
+      border: 0;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    button:hover {
+      background: #0c5076;
+    }
+
+    .footer-note {
+      color: var(--muted);
+      font-size: 11px;
+      margin-top: 16px;
+      border-top: 1px solid var(--line);
+      padding-top: 7px;
+    }
+
+    @media (max-width: 650px) {
+      body {
+        font-size: 13px;
+      }
+
+      .page {
+        margin: 0;
+        padding: 22px 19px;
+      }
+
+      .item-head {
+        display: block;
+      }
+
+      .date {
+        display: block;
+        margin-top: 2px;
+      }
+
+      .contact {
+        font-size: 11px;
+      }
+    }
+
+    @media print {
+      @page {
+        size: A4;
+        margin: 12mm 13mm;
+      }
+
+      body {
+        background: white;
+        font-size: 10.6px;
+        line-height: 1.33;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .page {
+        padding: 0;
+        box-shadow: none;
+        margin: 0;
+        max-width: none;
+      }
+
+      .toolbar,
+      .footer-note {
+        display: none;
+      }
+
+      h1 {
+        font-size: 22px;
+      }
+
+      header {
+        padding-bottom: 8px;
+      }
+
+      section {
+        margin-top: 10px;
+      }
+
+      h2 {
+        margin-bottom: 5px;
+        padding-bottom: 3px;
+      }
+
+      .item {
+        margin-bottom: 8px;
+      }
+
+      .item-head h3 {
+        font-size: 11px;
+      }
+
+      .contact,
+      .sub,
+      .date {
+        font-size: 9.5px;
+      }
+
+      .role {
+        font-size: 11px;
+      }
+
+      li {
+        margin: 2px 0;
+      }
+
+      ul {
+        margin-top: 3px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <div class="container">
-        <header>
-            <h1>ABHAY R NAIR</h1>
-            <p class="subtitle">Computer Engineering Student | Data Science Specialist | Full Stack Developer</p>
-            <div class="contact-info">
-                <span>📧 <a href="mailto:abhayrnair2005@gmail.com">gmail</a></span>
-                <span> <a href="https://abhay-nair.github.io/portfolio/" target="_blank">Portfolio</a>
-                <span>📱 +91 8591145615</span>
-                <span>📍 Mumbai, India</span>
-                <span>🔗 <a href="https://www.linkedin.com/in/abhay-nair-1b9293232" target="_blank">LinkedIn</a></span>
-                <span>💻 <a href="https://github.com/Abhay-Nair" target="_blank">GitHub</a></span>
-            </div>
-        </header>
 
-        <section>
-            <h2>PROFESSIONAL SUMMARY</h2>
-            <p>
-                Computer Engineering student specializing in Data Science with strong hands-on experience in machine learning, 
-                data analytics, full-stack web development, and computer vision. Skilled in building end-to-end projects including 
-                predictive models, analytics dashboards, and web applications. Actively exploring cybersecurity, penetration testing, 
-                and scalable software systems while preparing for competitive exams like GATE.
-            </p>
-        </section>
+  <div class="toolbar">
+    <button onclick="window.print()">
+      Download / Save as PDF
+    </button>
+  </div>
 
-        <section>
-            <h2>EDUCATION</h2>
-            <div style="margin-bottom: 20px;">
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <div>
-                        <h3>Bachelor of Technology in Computer Engineering (Data Science)</h3>
-                        <p class="institution">DY Patil RAIT College of Engineering, Mumbai</p>
-                    </div>
-                    <span class="date">2023 - 2027</span>
-                </div>
-                <p style="margin-top: 5px;">Currently in 3rd Year</p>
-                <p>current CGPA:- 8.64 out of 10</p>
-            </div>
-            
-            <div>
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <div>
-                        <h3>Bachelor of Science Degree</h3>
-                        <p class="institution">Indian Institute of Technology (IIT) Madras</p>
-                    </div>
-                    <span class="date">Ongoing</span>
-                </div>
-            </div>
-            <div>
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <div>
-                        <h3>12th(ISE)</h3>
-                        <p class="institution">Universal High School</p>
-                    </div>
-                    <span >12th:-year of completion:-2023 marks:- 62.3</span>
-                </div>
-            </div>
-            <div>
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <div>
-                        <h3>10th(ICSE)</h3>
-                        <p class="institution">Universal High School</p>
-                    </div>
-                    <span >10th:-year of completion:-2021 marks:- 82</span>
-                </div>
-            </div>
-        </section>
+  <main class="page">
 
-        <section>
-            <h2>TECHNICAL SKILLS</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h4>Programming Languages</h4>
-                    <div class="skill-tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">SQL</span>
-                        <span class="tag">HTML/CSS</span>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h4>Frameworks & Libraries</h4>
-                    <div class="skill-tags">
-                        <span class="tag">React</span>
-                        <span class="tag">Flask</span>
-                        <span class="tag">FastAPI</span>
-                        <span class="tag">Node.js</span>
-                        <span class="tag">Express</span>
-                        <span class="tag">Streamlit</span>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h4>Data Science & ML</h4>
-                    <div class="skill-tags">
-                        <span class="tag">TensorFlow</span>
-                        <span class="tag">Keras</span>
-                        <span class="tag">OpenCV</span>
-                        <span class="tag">Pandas</span>
-                        <span class="tag">NumPy</span>
-                        <span class="tag">Scikit-learn</span>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h4>Tools & Platforms</h4>
-                    <div class="skill-tags">
-                        <span class="tag">Git/GitHub</span>
-                        <span class="tag">Power BI</span>
-                        <span class="tag">MySQL</span>
-                        <span class="tag">PostgreSQL</span>
-                        <span class="tag">MongoDB</span>
-                        <span class="tag">VS Code</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <!-- HEADER -->
+    <header>
+      <h1>ABHAY R NAIR</h1>
 
-        <section>
-            <h2>KEY COMPETENCIES</h2>
-            <ul>
-                <li><strong>Data Science:</strong> Data Cleaning & Preprocessing, Exploratory Data Analysis (EDA), Feature Engineering, Regression Models, Model Evaluation, Data Visualization</li>
-                <li><strong>Web Development:</strong> Full-stack development with MERN stack, RESTful API design, JWT Authentication, Responsive UI/UX</li>
-                <li><strong>Machine Learning:</strong> Computer Vision, Facial Recognition, Predictive Modeling, SARIMA Time Series Forecasting</li>
-                <li><strong>Soft Skills:</strong> Problem Solving, Self-Learning, Project Ownership, Team Collaboration, Technical Documentation</li>
-            </ul>
-        </section>
+      <p class="role">
+        Data Science | Machine Learning | Python & SQL | AI Applications
+      </p>
 
-        <section>
-            <h2>PROJECTS</h2>
-            
-            <div class="project">
-                <div class="project-header">
-                    <h3>InsightX - AI-Powered Analytics SaaS Platform</h3>
-                    <a href="https://github.com/Abhay-Nair/InsightX" target="_blank" class="project-link">View Project →</a>
-                </div>
-                <p>AI-powered analytics SaaS platform that transforms CSV data into actionable insights with interactive visualizations</p>
-                <ul>
-                    <li>Developed enterprise-grade analytics platform with intelligent data processing and visualization capabilities</li>
-                    <li>Implemented JWT authentication, role-based access control, and secure data handling</li>
-                    <li>Built interactive dashboards with real-time data updates and AI-powered recommendations</li>
-                </ul>
-                <p class="tech-stack"><strong>Tech Stack:</strong> JavaScript, React, FastAPI, PostgreSQL, AI/ML</p>
-            </div>
+      <div class="contact">
+        <span>Mumbai, India</span>
 
-            <div class="project">
-                <div class="project-header">
-                    <h3>Sales Forecasting Analytics</h3>
-                    <a href="https://github.com/Abhay-Nair/Sales-Forecasting-Analytics" target="_blank" class="project-link">View Project →</a>
-                </div>
-                <p>End-to-end sales forecasting pipeline with SARIMA modeling achieving 90% accuracy</p>
-                <ul>
-                    <li>Designed and implemented complete data pipeline from cleaning to model deployment</li>
-                    <li>Achieved 90% forecasting accuracy using SARIMA time series modeling</li>
-                    <li>Created interactive Power BI dashboard for business insights and KPI tracking</li>
-                </ul>
-                <p class="tech-stack"><strong>Tech Stack:</strong> Python, SARIMA, Power BI, Data Analytics</p>
-            </div>
+        <span>
+          <a href="tel:+918591145615">
+            +91 8591145615
+          </a>
+        </span>
 
-            <div class="project">
-                <div class="project-header">
-                    <h3>AI Code Reviewer</h3>
-                    <a href="https://github.com/Abhay-Nair/AI-code-reviewer" target="_blank" class="project-link">View Project →</a>
-                </div>
-                <p>Intelligent code review system using OpenAI for automated code quality analysis</p>
-                <ul>
-                    <li>Built automated code review tool that analyzes code quality and suggests improvements</li>
-                    <li>Integrated OpenAI API for intelligent feedback based on best practices</li>
-                    <li>Developed React frontend with FastAPI backend for seamless user experience</li>
-                </ul>
-                <p class="tech-stack"><strong>Tech Stack:</strong> JavaScript, FastAPI, OpenAI, PostgreSQL, React</p>
-            </div>
+        <span>
+          <a href="mailto:abhayrnair2005@gmail.com">
+            abhayrnair2005@gmail.com
+          </a>
+        </span>
 
-            <div class="project">
-                <div class="project-header">
-                    <h3>SIC - Smart Immigration Care</h3>
-                    <a href="https://github.com/Abhay-Nair/SIC" target="_blank" class="project-link">View Project →</a>
-                </div>
-                <p>Healthcare management system for migrant workers with role-based dashboards</p>
-                <ul>
-                    <li>Developed comprehensive platform for managing migrant healthcare services</li>
-                    <li>Implemented role-based access for doctors, officials, and authorities</li>
-                    <li>Created intuitive dashboards for efficient healthcare service delivery</li>
-                </ul>
-                <p class="tech-stack"><strong>Tech Stack:</strong> Python, Flask, SQLite, JavaScript</p>
-            </div>
+        <span>
+          <a href="https://www.linkedin.com/in/abhay-nair-1b9293232"
+             target="_blank" rel="noopener noreferrer">
+            LinkedIn
+          </a>
+        </span>
 
-            <div class="project">
-                <div class="project-header">
-                    <h3>Memories - Social Memory Sharing Platform</h3>
-                    <a href="https://github.com/Abhay-Nair/Memories2" target="_blank" class="project-link">View Project →</a>
-                </div>
-                <p>Full-stack MERN social platform for creating and sharing personal memories</p>
-                <ul>
-                    <li>Built complete social media application with authentication and user management</li>
-                    <li>Implemented CRUD operations for memory posts with image upload functionality</li>
-                    <li>Designed responsive UI with modern React patterns and state management</li>
-                </ul>
-                <p class="tech-stack"><strong>Tech Stack:</strong> MongoDB, Express, React, Node.js, JavaScript</p>
-            </div>
-        </section>
+        <span>
+          <a href="https://github.com/Abhay-Nair"
+             target="_blank" rel="noopener noreferrer">
+            GitHub
+          </a>
+        </span>
 
-        <section>
-            <h2>CERTIFICATIONS & ACHIEVEMENTS</h2>
-            <ul>
-                <li>Pursuing dual degree from DY Patil RAIT and IIT Madras</li>
-                <li>Preparing for GATE examination</li>
-                <li>Active contributor to open-source projects on GitHub</li>
-                <li>Strong foundation in cybersecurity</li>
-            </ul>
-        </section>
+        <span>
+          <a href="https://abhay-nair.github.io/portfolio/"
+             target="_blank" rel="noopener noreferrer">
+            Portfolio
+          </a>
+        </span>
+      </div>
+    </header>
 
-        <section>
-            <h2>INTERESTS</h2>
-            <p>
-                Artificial Intelligence • Machine Learning • Data Analytics • Full Stack Development • 
-                Cybersecurity • Penetration Testing • Cloud Computing • Scalable Systems
-            </p>
-        </section>
-    </div>
+    <!-- SUMMARY -->
+    <section>
+      <h2>Professional Summary</h2>
+
+      <p>
+        Computer Engineering (Data Science) undergraduate graduating
+        in 2027 with practical experience in Python, SQL, data
+        preprocessing, machine learning workflows and API development.
+        Completed an AI &amp; Data Science internship at Axis Bank,
+        supporting customer service query classification and CTST
+        tagging. Built projects in analytics, time-series forecasting
+        and local-LLM-powered developer tools. Interested in
+        cloud-scale data engineering and applied AI.
+      </p>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section>
+      <h2>Professional Experience</h2>
+
+      <div class="item">
+        <div class="item-head">
+          <h3>AI &amp; Data Science Intern | Axis Bank</h3>
+          <span class="date">Aug 2026 – Oct 2026</span>
+        </div>
+
+        <p class="sub">Mumbai, India</p>
+
+        <ul>
+          <li>
+            Contributed to a Service Recovery initiative involving
+            customer service query classification and CTST tagging
+            workflows.
+          </li>
+
+          <li>
+            Worked with Python, Pandas, NumPy, Scikit-learn and SQL
+            on data analysis and machine-learning-related tasks.
+          </li>
+
+          <li>
+            Gained experience with structured-data processing and
+            applied analytics in a banking environment.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="skills">
+      <h2>Technical Skills</h2>
+
+      <p>
+        <strong>Programming &amp; Databases:</strong>
+        Python, SQL, JavaScript, PostgreSQL, MongoDB, MySQL
+      </p>
+
+      <p>
+        <strong>Data Science &amp; Machine Learning:</strong>
+        Pandas, NumPy, Scikit-learn, Data Cleaning,
+        Exploratory Data Analysis, Regression, Classification,
+        Time-Series Forecasting, Model Evaluation
+      </p>
+
+      <p>
+        <strong>Development &amp; Visualization:</strong>
+        FastAPI, Flask, REST APIs, React, Power BI,
+        Git, GitHub
+      </p>
+
+      <p>
+        <strong>Generative AI:</strong>
+        LLM Integration, Local LLM Inference,
+        Ollama, Mistral
+      </p>
+    </section>
+
+    <!-- PROJECTS -->
+    <section>
+      <h2>Selected Projects</h2>
+
+      <!-- INSIGHTX -->
+      <div class="item">
+        <div class="item-head">
+          <h3>InsightX | Data Analytics Platform</h3>
+
+          <a class="date"
+             href="https://github.com/Abhay-Nair/InsightX"
+             target="_blank" rel="noopener noreferrer">
+            GitHub Project
+          </a>
+        </div>
+
+        <p class="sub">
+          Python, FastAPI, MongoDB, React
+        </p>
+
+        <ul>
+          <li>
+            Developed backend functionality for CSV/XLSX dataset
+            uploads, metadata management and authenticated access.
+          </li>
+
+          <li>
+            Implemented data cleaning, profiling and descriptive
+            statistics workflows to support dataset exploration.
+          </li>
+        </ul>
+      </div>
+
+      <!-- SALES FORECASTING -->
+      <div class="item">
+        <div class="item-head">
+          <h3>Sales Forecasting &amp; Analytics</h3>
+
+          <a class="date"
+             href="https://github.com/Abhay-Nair/Sales-Forecasting-Analytics"
+             target="_blank" rel="noopener noreferrer">
+            GitHub Project
+          </a>
+        </div>
+
+        <p class="sub">
+          Python, Pandas, SARIMA, Power BI
+        </p>
+
+        <ul>
+          <li>
+            Built a time-series sales forecasting workflow
+            covering preprocessing, model fitting and
+            forecast evaluation.
+          </li>
+
+          <li>
+            Used Power BI to present sales trends and business
+            metrics; evaluated forecasting error using MAPE.
+          </li>
+        </ul>
+      </div>
+
+      <!-- AI CODE REVIEWER -->
+      <div class="item">
+        <div class="item-head">
+          <h3>AI Code Reviewer | LLM-Powered Analysis</h3>
+
+          <a class="date"
+             href="https://github.com/Abhay-Nair/AI-code-reviewer"
+             target="_blank" rel="noopener noreferrer">
+            GitHub Project
+          </a>
+        </div>
+
+        <p class="sub">
+          Python, FastAPI, React, Monaco Editor, Ollama, Mistral
+        </p>
+
+        <ul>
+          <li>
+            Built a code review tool using a local LLM
+            to return automated feedback through a FastAPI
+            endpoint.
+          </li>
+
+          <li>
+            Integrated Monaco Editor with line-level annotations
+            and hover feedback in a React interface.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section>
+      <h2>Education</h2>
+
+      <div class="item">
+        <div class="item-head">
+          <h3>
+            B.Tech, Computer Engineering (Data Science)
+            | DY Patil University – RAIT
+          </h3>
+
+          <span class="date">
+            2023 – 2027 (Expected)
+          </span>
+        </div>
+
+        <p class="sub">Nerul, Navi Mumbai</p>
+      </div>
+
+      <div class="item">
+        <div class="item-head">
+          <h3>
+            BS, Data Science &amp; Applications
+            | IIT Madras
+          </h3>
+
+          <span class="date">Ongoing</span>
+        </div>
+
+        <p class="sub">
+          Concurrent degree program; in progress
+        </p>
+      </div>
+    </section>
+
+    <p class="footer-note">
+      Academic details, technical experience and project
+      descriptions should be verified before submission.
+    </p>
+
+  </main>
+
 </body>
 </html>
